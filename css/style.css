@@ -11,12 +11,15 @@ body {
   background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
   background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%); }
 
-.p1-gradient-color {
-  background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-  background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-  background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  .p1-gradient-color {
+    background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
 
 ::-moz-selection {
   background: #000;
@@ -623,3 +626,56 @@ a {
 .letter-spacing {
   letter-spacing: .2rem;
   color: rgba(255, 255, 255, 0.5) !important; }
+
+  .social-list {
+  list-style: none;
+  padding: 0;
+}
+
+.social-item {
+  display: flex; /* or inline-flex */
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Center icons horizontally */
+  margin-bottom: 1rem; /* Spacing between items */
+}
+
+.social-link {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.social-title {
+  font-size: 0.8rem; /* Adjust font size for titles */
+  margin-top: 5px; /* Spacing between icon and title */
+}
+
+.social-media-icons {
+  list-style: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+}
+
+.social-media-icons li {
+  margin-bottom: 15px; /* Add some space between list items */
+}
+
+.social-media-icons li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Optional: to remove underline from links */
+}
+
+.social-media-icons li a i {
+  font-size: 30px; /* Set font icon size */
+  width: 30px; /* Set fixed width */
+  height: 30px; /* Set fixed height */
+  display: flex; /* Use flexbox to center content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  margin-right: 10px; /* Adjust the value as needed for spacing */
+}
+
+.social-media-icons li a p {
+  margin: 0; /* Remove default margin from <p> */
+  font-size: 20px; /* Set text size */
+}
+
